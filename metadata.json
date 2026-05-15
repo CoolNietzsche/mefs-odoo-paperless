@@ -1,0 +1,10 @@
+{
+  "name": "MEFS",
+  "description": "Production-ready mobile wrapper for Odoo 18 (Messeret Paperless) with native features, biometrics, and push notifications.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ],
+  "majorCapabilities": []
+}

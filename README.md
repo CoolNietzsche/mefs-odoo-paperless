@@ -1,11 +1,36 @@
-<div align="center">
+# MEFS (Odoo Mobile)
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Production-ready mobile wrapper for Messeret Odoo 18.
 
-  <h1>Built with AI Studio</h2>
+## Features
+- **Native UI Shell**: Bottom tabs, native headers, translucent blur effects.
+- **Biometrics**: Face ID / Fingerprint login support.
+- **Push Notifications**: Integrated with Odoo mail.message via Expo.
+- **JS Bridge**: Communicate between Odoo and Native (scanner, sharing, etc).
+- **Scanner**: QR/Barcode scanning for inventory and actions.
+- **Offline Mode**: Connection monitoring and offline caching.
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Getting Started
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+### Prerequisites
+- Node.js (v18+)
+- Expo CLI
+- Odoo 18 Community Edition
 
-</div>
+### Frontend Setup
+1. `npm install`
+2. Configure `.env` with your Odoo URL
+3. `npm run dev`
+
+### Odoo Backend Setup
+1. Copy `odoo_modules/mobile_push_notifications` to your Odoo addons path.
+2. Install the module in Odoo.
+3. Configure your Expo credentials in the module settings.
+
+## JS Bridge API
+User `window.OdooMobileApp` in your Odoo JS views to access native features:
+```javascript
+OdooMobileApp.openScanner(result => {
+  console.log("Scanned:", result);
+});
+```
