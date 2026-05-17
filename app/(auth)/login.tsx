@@ -18,7 +18,7 @@ import { colors } from '../../src/theme/colors';
 import { typography } from '../../src/theme/typography';
 import { spacing } from '../../src/theme/spacing';
 import { Eye, EyeOff, Server, Database, User, Lock, ChevronRight } from 'lucide-react-native';
-import { AppConfig } from '../../app.config';
+import { AppConfig } from '../../src/config';
 import * as Haptics from 'expo-haptics';
 
 export default function LoginScreen() {
